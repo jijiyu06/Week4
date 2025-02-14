@@ -34,23 +34,98 @@
 
     /* Use these classes to style the .card component */
 
-    .card {}
-    .card__title {}
-    .card__excerpt {}
-    .card__image {}
-    .card__more {}
-    .card__more:hover {}
-    .card__more:active {}
+    .card {
+    width: 300px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-family: 'Noto Sans KR', sans-serif;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card__title {
+    margin: 16px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card__excerpt {
+    margin: 0 16px 16px;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.card__more {
+    display: block;
+    margin: 0 16px 16px;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.card__more:hover {
+    color: #0056b3;
+}
+
+.card__more:active {
+    color: #003d82;
+}
 
     @media screen and (min-width: 1024px) {
-      .card {}
-      .card__title {}
-      .card__excerpt {}
-      .card__image {}
-      .card__more {}
-      .card__more:hover {}
-      .card__more:active {}
+    .card {
+        width: 400px;
+        border: 3px solid #aaa;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.4s ease;
     }
+
+    .card:hover {
+        transform: translateY(-15px);
+    }
+
+    .card__image {
+        height: 250px;
+    }
+
+    .card__title {
+        font-size: 2rem;
+        color: #222;
+    }
+
+    .card__excerpt {
+        font-size: 1.1rem;
+        color: #444;
+    }
+
+    .card__more {
+        font-size: 1.1rem;
+        color: #0066cc;
+    }
+
+    .card__more:hover {
+        color: #004499;
+        text-decoration: underline;
+    }
+
+    .card__more:active {
+        color: #002266;
+    }
+}
+
 
     /* You can leave everything below as is — we'll explain flexbox in a later lecture! */
 
