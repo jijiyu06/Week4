@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article Card Component</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: darkgreen;
+      display: flex;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1200px;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      width: 320px;
+      text-align: center;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    .card__image {
+      aspect-ratio: 16/9;
+      width: 100%;
+    }
+    .card__title {
+      font-size: 2rem;
+      margin: 15px 0 10px;
+
+    }
+    .card__excerpt {
+      font-size: 1rem;
+      padding: 0 15px;
+      color: black;
+    }
+
+    
+    .card__more {
+      display: block;
+      text-align: center;
+      padding: 1rem;
+      background-color: lightblue;
+      color: white;
+      font-weight: bold;
+    }
+    .card__more:hover {
+      background-color: lightgreen;
+      border-radius: 10px;
+    }
+    .card__more:active {
+      background-color: darkgreen;
+    }
+    @media screen and (min-width: 500px) {
+      .cards {
+        flex-direction: row;
+      }
+      .card__more {
+        display: block;
+        text-align: center;
+        border-radius: 5em;
+      }
+      .card__more:active {
+        background-color: lightgreen;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cards">
+    <div class="card">
+      <img class="card__image" src="https://via.placeholder.com/320x180" alt="Article Image">
+      <h2 class="card__title">Article Title</h2>
+      <p class="card__excerpt">This is a short excerpt from the article. Read more for details.</p>
+      <div class="card__tags">
+        <span class="tag">Tech</span>
+        <span class="tag">Innovation</span>
+        <span class="tag">AI</span>
+      </div>
+      <a href="#" class="card__more">Read More</a>
+    </div>
+  </div>
+</body>
+</html>
